@@ -125,10 +125,10 @@ main {
 }
 
 .content a {
-  color: #00dd72;
-  background-color: #505050;
-  padding: 1px;
-  border-radius: 10%;
+  color: #008eb2;
+  background-color: #272727;
+  padding: 0px 10px;
+  border-radius: 5px;
   text-decoration: none;
 }
 
