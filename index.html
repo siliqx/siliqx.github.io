@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,11 +42,12 @@
     <header>
       <div class="logo">
         <a href="index.html">
-          <img src="images/siliqx.svg" alt="Siliqx Logo">
+          <img src="images/siliqx.svg" alt="Siliqx Logo" loading="lazy">
         </a>
       </div>
       <nav>
-        <div class="hamburger" onclick="toggleMenu()">
+        <!-- 改用 button 元素以提升無障礙性 -->
+        <div class="hamburger" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu()">
           &#9776;
         </div>
         <ul class="menu">
@@ -73,11 +73,15 @@
 
     <main>
       <section class="content">
-        <img src="images/siliqx_banner.png" alt="Siliqx banner" class="banner">
+        <img src="images/siliqx_banner.png" alt="Siliqx banner" class="banner" loading="lazy">
         <h1 id="about-us">* 關於我們 About Us ✩‧₊˚</h1>
         <p>
-
-          Welcome to Siliqx! We are an innovative tech startup with a mission to preserve and revitalize languages—especially Formosan and other indigenous languages—through the power of computer science and artificial intelligence. By developing resources like digital corpora, educational applications, and more, we strive to safeguard linguistic heritage and inspire future generations to connect with these vibrant languages. Join us on this journey to blend technology with culture, creating a platform that celebrates and protects the world’s linguistic diversity.
+          Welcome to Siliqx! We are an innovative tech startup with a mission to preserve and revitalize
+          languages—especially Formosan and other indigenous languages—through the power of computer science and
+          artificial intelligence. By developing resources like digital corpora, educational applications, and more, we
+          strive to safeguard linguistic heritage and inspire future generations to connect with these vibrant
+          languages. Join us on this journey to blend technology with culture, creating a platform that celebrates and
+          protects the world’s linguistic diversity.
         </p>
         <p>
           歡迎來到Siliqx！我們是一家創新的科技新創團隊，致力於運用計算機科學和人工智慧來保存並復興語言，特別是臺灣原住民及其他民族的語言。透過開發數位語料庫、教育應用程式等資源，我們希望能夠保護語言遺產，並激勵新一代與這些充滿活力的語言產生聯結。加入我們的行列，在科技與文化的交融中，共同創建一個讚頌並保護全球語言多樣性的平臺。
@@ -85,70 +89,44 @@
         <div class="divider-bar"></div>
 
         <h1 id="members">* 團隊 Members ✩‧₊˚</h1>
-        <div class="members-grid">
-          <div class="member">
-            <img src="images/mirusausiliq.jpg" alt="Mirusa Tan Usiliq">
-            <p class="role">Founder & CEO 🇹🇼</p>
-            <p class="name">
-              <a href="mailto:mirusausiliq@gmail.com" style=" color: #fff; background-color: transparent;">Mirusa Tan Usiliq</a>
-            </p>
-          </div>
-          <div class="member">
-            <img src="images/vinicius.jpg" alt="Vicícius de Moraes">
-            <p class="role">Co-Founder 🇧🇷</p>
-            <p class="name">Vinícius de Moraes</p>
-          </div>
-          <div class="member">
-            <img src="images/trashjie.jpeg" alt="Trash">
-            <p class="role">Co-Founder 🇺🇸</p>
-            <p class="name">Trash</p>
-          </div>
-          <div class="member">
-            <img src="images/agong.png" alt="Agong">
-            <p class="role">Co-Founder 🇺🇸</p>
-            <p class="name">Agong</p>
-          </div>
-          <div class="member">
-            <img src="images/lucasfilms.png" alt="Lucas L. de Lucena">
-            <p class="role">Co-Founder 🇧🇷</p>
-            <p class="name">Lucas Films</p>
-          </div>
-          <div class="member">
-            <img src="images/ayu.jpeg" alt="Nicolas Chen">
-            <p class="role">Co-Founder 🇺🇸</p>
-            <p class="name">Ayu</p>
-          </div>
+        <div class="member">
+          <img src="images/mirusausiliq.jpg" alt="Mirusa Tan Usiliq" loading="lazy">
+          <p class="role">Founder &amp; CEO 🇹🇼</p>
+          <p class="name">
+            <a href="mailto:mirusausiliq@gmail.com" class="email-link">Mirusa Tan Usiliq</a>
+          </p>
         </div>
+
+        <!-- 可選：其他團隊成員（目前已註解） -->
+        <!--
+        <div class="members-grid">
+          ...
+        </div>
+        -->
         <div class="divider-bar"></div>
 
-
         <h1 id="news">* 最新消息 News ✩‧₊˚</h1>
-        <h3 style="color: #dc9b02">2024-11-12</h3>
+        <h3 style="color: #dc9b02"><time datetime="2024-11-12">2024-11-12</time></h3>
         <p>
-          Siliqx is proud to announce the lastest version of website. Check it out <a
-            href="https://siliqx.com">here</a>.
+          Siliqx is proud to announce the latest version of our website. Check it out <a href="https://siliqx.com">here</a>.
         </p>
 
-        <h3 style="color: #dc9b02">2024-11-09</h3>
-        <p>Siliqx is proud to announce the launch of our Basay Dictionary 巴賽語辭典! This project is a collaboration withthe
-          Basay community to preserve and revitalize their language. Check it out <a
-            href="https://mirusausiliq.com/basaydictionary">here</a>.
-        </p>
-
-        <h3 style="color: #dc9b02">2023-08-01</h3>
+        <h3 style="color: #dc9b02"><time datetime="2024-11-09">2024-11-09</time></h3>
         <p>
-          Siliqx is proud to announce the launch of our Facidol Dictionary 麵包果辭典! This project is a collaboration with
-          the
-          Basay community to preserve and revitalize their language. Check it out <a
-            href="https://mirusausiliq.com/facidol-dict">here</a>.
+          Siliqx is proud to announce the launch of our Basay Dictionary 巴賽語辭典! This project is a collaboration with the
+          Basay community to preserve and revitalize their language. Check it out <a href="https://mirusausiliq.com/basaydictionary">here</a>.
         </p>
 
-        <h3 style="color: #dc9b02">2022-01-01</h3>
+        <h3 style="color: #dc9b02"><time datetime="2023-08-01">2023-08-01</time></h3>
+        <p>
+          Siliqx is proud to announce the launch of our Facidol Dictionary 麵包果辭典! This project is a collaboration with the
+          Basay community to preserve and revitalize their language. Check it out <a href="https://mirusausiliq.com/facidol-dict">here</a>.
+        </p>
+
+        <h3 style="color: #dc9b02"><time datetime="2022-01-01">2022-01-01</time></h3>
         <p>
           Siliqx is founded by Mirusa Tan Usiliq. Post-pandamic... Where our dreams began...
         </p>
-
-
         <div class="divider-bar"></div>
 
         <h1 id="projects">* 專案研究 Projects ✩‧₊˚</h1>
@@ -158,16 +136,16 @@
         <p>Our collaboration with the Basay community to preserve and revitalize their language.</p>
 
         <h3>
-          <a href="https://mirusausiliq.com/facidol-dict">Facidol Dictionary 麵包果辭典
-          </a>
+          <a href="https://mirusausiliq.com/facidol-dict">Facidol Dictionary 麵包果辭典</a>
         </h3>
-        <p>An Online Dictionary for Amis(Pangcah) Language.</p>
+        <p>An Online Dictionary for Amis (Pangcah) Language.</p>
         <div class="divider-bar"></div>
 
         <h1 id="terms">* 服務條款 Terms of Service ✩‧₊˚</h1>
         <h3>1. 接受條款 Acceptance of Terms</h3>
         <p>
-          By accessing or using Siliqx's platform, you agree to comply with and be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the platform.
+          By accessing or using Siliqx's platform, you agree to comply with and be bound by these Terms of Service. If you
+          disagree with any part of the terms, you may not access the platform.
         </p>
         <p>
           使用或訪問 Siliqx 平台，即表示您同意遵守本服務條款的規定。如果您不同意任何條款內容，請勿使用本平台。
@@ -175,7 +153,9 @@
 
         <h3>2. 平台用途 Purpose of Platform</h3>
         <p>
-          Siliqx is a platform dedicated to the preservation and revitalization of languages, especially Formosan and other indigenous languages. We offer resources such as digital corpora, educational applications, and other digital tools for linguistic preservation and education.
+          Siliqx is a platform dedicated to the preservation and revitalization of languages, especially Formosan and other
+          indigenous languages. We offer resources such as digital corpora, educational applications, and other digital tools
+          for linguistic preservation and education.
         </p>
         <p>
           Siliqx 是一個致力於語言保存與復興的平台，特別是台灣原住民及其他民族的語言。我們提供數位語料庫、教育應用程式和其他數位工具，以促進語言的保存與教育。
@@ -183,7 +163,9 @@
 
         <h3>3. 使用者責任 User Responsibilities</h3>
         <p>
-          Users are encouraged to participate respectfully and contribute positively to the community. You agree not to use the platform for any illegal, harmful, or abusive purposes, including but not limited to hate speech, harassment, or spamming.
+          Users are encouraged to participate respectfully and contribute positively to the community. You agree not to use
+          the platform for any illegal, harmful, or abusive purposes, including but not limited to hate speech, harassment, or
+          spamming.
         </p>
         <p>
           鼓勵用戶尊重並積極參與社群，為社群貢獻正向影響。您同意不以任何非法、有害或濫用的方式使用本平台，包括但不限於仇恨言論、騷擾或濫發訊息。
@@ -191,7 +173,9 @@
 
         <h3>4. 智慧財產權 Intellectual Property</h3>
         <p>
-          All content on Siliqx, including digital corpora, applications, and other resources, are protected by intellectual property laws. Users may not redistribute, reproduce, or exploit our content without explicit permission. Users who contribute content to Siliqx grant Siliqx the right to use, display, and share that content on the platform.
+          All content on Siliqx, including digital corpora, applications, and other resources, are protected by intellectual
+          property laws. Users may not redistribute, reproduce, or exploit our content without explicit permission. Users who
+          contribute content to Siliqx grant Siliqx the right to use, display, and share that content on the platform.
         </p>
         <p>
           Siliqx 平台上的所有內容，包括數位語料庫、應用程式和其他資源，均受智慧財產權法的保護。未經明確許可，用戶不得轉發、複製或利用我們的內容。貢獻內容至 Siliqx 的用戶，授權 Siliqx 使用、展示並分享該內容於平台上。
@@ -199,7 +183,8 @@
 
         <h3>5. 隱私與數據保護 Privacy and Data Protection</h3>
         <p>
-          Siliqx values user privacy. Please review our Privacy Policy to understand how we collect, use, and protect your information. By using our platform, you consent to the data practices described in the Privacy Policy.
+          Siliqx values user privacy. Please review our Privacy Policy to understand how we collect, use, and protect your
+          information. By using our platform, you consent to the data practices described in the Privacy Policy.
         </p>
         <p>
           Siliqx 重視用戶隱私。請參閱我們的隱私政策，以瞭解我們如何收集、使用和保護您的信息。使用本平台，即表示您同意隱私政策中所描述的數據處理方式。
@@ -207,7 +192,8 @@
 
         <h3>6. 責任限制 Limitations of Liability</h3>
         <p>
-          Siliqx is not responsible for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use our platform.
+          Siliqx is not responsible for any direct, indirect, incidental, or consequential damages resulting from the use or
+          inability to use our platform.
         </p>
         <p>
           Siliqx 不對因使用或無法使用本平台而導致的任何直接、間接、附帶或結果性損害負責。
@@ -215,7 +201,8 @@
 
         <h3>7. 條款變更 Changes to Terms</h3>
         <p>
-          We may modify these Terms of Service from time to time. Your continued use of the platform signifies your acceptance of the updated terms. We encourage you to review the Terms of Service regularly for any changes.
+          We may modify these Terms of Service from time to time. Your continued use of the platform signifies your acceptance
+          of the updated terms. We encourage you to review the Terms of Service regularly for any changes.
         </p>
         <p>
           我們可能會不時修改本服務條款。您繼續使用本平台即表示接受更新後的條款。
@@ -223,7 +210,7 @@
 
         <h3>8. Contact Information</h3>
         <p>
-          For questions regarding these Terms of Service, please contact us at 
+          For questions regarding these Terms of Service, please contact us at
         </p>
         <p>
           如有關於本服務條款的問題，請聯繫我們：
@@ -234,18 +221,17 @@
 
     <footer>
       <div class="social-icons">
-        <a href="https://facebook.com/siliqx"><img src="images/facebook.svg" alt="Facebook"></a>
-        <a href="https://instagram.com/siliqx"><img src="images/instagram.svg" alt="Instagram"></a>
-        <a href="https://threads.net/@siliqx"><img src="images/threads.svg" alt="Threads"></a>
-        <a href="https://x.com/siliqx"><img src="images/x.svg" alt="X"></a>
-        <a href="https://github.com/siliqx"><img src="images/github.svg" alt="GitHub"></a>
-        <a href="#"><img src="images/discord.svg" alt="Discord"></a>
+        <a href="https://facebook.com/siliqx"><img src="images/facebook.svg" alt="Facebook" loading="lazy"></a>
+        <a href="https://instagram.com/siliqx"><img src="images/instagram.svg" alt="Instagram" loading="lazy"></a>
+        <a href="https://threads.net/@siliqx"><img src="images/threads.svg" alt="Threads" loading="lazy"></a>
+        <a href="https://x.com/siliqx"><img src="images/x.svg" alt="X" loading="lazy"></a>
+        <a href="https://github.com/siliqx"><img src="images/github.svg" alt="GitHub" loading="lazy"></a>
+        <a href="#"><img src="images/discord.svg" alt="Discord" loading="lazy"></a>
       </div>
-      <p>&copy; 2023-2024 Siliqx. All Rights Reserved.</p>
+      <p>&copy; 2019-2025 Siliqx Labs. All Rights Reserved.</p>
     </footer>
   </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
